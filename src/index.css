@@ -13,11 +13,11 @@
   }
 
   .content {
-    @apply p-5 flex flex-col justify-center w-full mx-56 rounded-md bg-main/85 shadow-lg ring-1 ring-white/35 text-justify
+    @apply p-5 flex flex-col justify-center w-full mx-56 rounded-md bg-main/45 shadow-lg ring-1 ring-white/35 backdrop-blur-md text-justify
   }
 
   .navbar {
-    @apply fixed top-0 left-0 flex justify-between items-center bg-secondary/85 shadow-lg ring-1 ring-white/35  w-screen h-24 rounded-b-xl;
+    @apply fixed top-0 left-0 flex justify-between items-center bg-secondary/45 shadow-lg ring-1 ring-white/45 backdrop-blur-sm  w-screen h-24 rounded-b-xl;
   }
 
   .navbar-title {
