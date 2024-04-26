@@ -1,3 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  .content-container {
+    @apply flex justify-center w-screen h-fit mt-36;
+  }
+
+  .name {
+    @apply font-bold font-mono text-main text-4xl p-1 mb-3 w-fit bg-accent rounded-sm
+  }
+
+  .content {
+    @apply p-5 flex flex-col justify-center w-full mx-56 rounded-md bg-main/85 shadow-lg ring-1 ring-white/35 text-justify
+  }
+
+  .navbar {
+    @apply fixed top-0 left-0 flex justify-between items-center bg-secondary/85 shadow-lg ring-1 ring-white/35  w-screen h-24 rounded-b-xl;
+  }
+
+  .navbar-title {
+     @apply font-bold ml-16 text-4xl font-mono;
+  }
+
+  .navbar-item-group {
+    @apply w-fit flex items-center mr-16 bg-accent/90 shadow-lg ring-1 ring-white/35  rounded-xl;
+  }
+
+  .navbar-item {
+    @apply font-bold text-main m-4;
+  }
+
+  .video {
+    @apply self-center p-2 bg-opacity-25 ring-1 ring-white/35 rounded-sm;
+  }
+
+  .intro-text-container {
+    @apply w-6/12 self-center
+  }
+
+  .intro-text {
+    @apply font-semibold font-mono text-xl
+  }
+
+  .intro-extra {
+    @apply text-center w-fit self-center mt-8
+  }
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -5,7 +56,9 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
+  background-image: url('/src/assets/homeBG.png');
   background-color: #242424;
+  background-size: cover;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,6 +78,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
+  flex-direction: column;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -34,6 +88,8 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
+
 
 button {
   border-radius: 8px;
