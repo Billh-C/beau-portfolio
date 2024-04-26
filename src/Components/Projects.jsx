@@ -9,14 +9,12 @@ export const Projects = () => {
         {films.map(film => {
             return <div key={film.ID}>
             <div className="content intro-extra mt-24">
-                <p className="film-title">
-                 {film.Name}
-                </p>
+                <p className="film-title">{film.Name}</p>
             </div>
             {console.log(isEven(film.ID))}
             {isEven(film.ID) === true ? 
-            (<LeftVideoPair embedId={film.embedId} desc={film.desc} />) :
-            (<RightVideoPair embedId={film.embedId} desc={film.desc} />)
+            (<LeftVideoPair film={film} />) :
+            (<RightVideoPair film={film} />)
             }
             </div>
         })}
@@ -27,27 +25,27 @@ export const Projects = () => {
 
 const LeftVideoPair = (props) => {
     return (
-        <div className="flex justify-evenly px-2 mt-16">
+        <div className="flex justify-center px-2 mt-16 mb-28 bg-white/10 backdrop-blur-xl py-24 mx-44 rounded-md">
             <div className="intro-text-container">
                 <p className="intro-text">
-                {props.desc}
+                {props.film.desc}
                 </p>
             </div>
             <div className="video">
-            <VideoEmbed embedId={props.embedId} />
+            <VideoEmbed embedId={props.film.embedId} />
             </div>
         </div>
     )
 }
 const RightVideoPair = (props) => {
     return (
-        <div className="flex justify-evenly px-2 mt-16 mb-28">
+        <div className="flex justify-center px-2 mt-16 mb-28 bg-white/10 backdrop-blur-xl py-24 mx-44 rounded-md">
             <div className="video">
-            <VideoEmbed embedId={props.embedId} />
+            <VideoEmbed embedId={props.film.embedId} />
             </div>
             <div className="intro-text-container">
-                <p className="intro-text">
-                {props.desc}
+                <p className="intro-text ml-16">
+                {props.film.desc}
                 </p>
             </div>
         </div>
@@ -65,5 +63,5 @@ export const films = [
     {ID: 4, Name:"Trench", desc: "A short film for a small actor's group to showcase their range and talents", embedId: "mELCaWTIyc4"},
     {ID: 5, Name:"Casablanca", desc: "An exercise in producing content for fashion brand 'Matches Fashion.' (University project)", embedId: "eTLQ0O61RdU"},
     {ID: 6, Name:"Animals In War", desc: "Short video for 'Animals in War' charity, celebrating and remembering the animals that saved lives in the war.", embedId: "DFEMETDdxuU"},
-    {ID: 7, Name:"ELF", desc: "Test promotional video for E.L.F cosmetics waterproof mascara.", embedId: "1A306K9BXVE"}
+    {ID: 7, Name:"E.L.F", desc: "Test promotional video for E.L.F cosmetics waterproof mascara.", embedId: "1A306K9BXVE"}
 ]
