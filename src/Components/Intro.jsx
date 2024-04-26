@@ -18,7 +18,7 @@ export const Intro = () => {
         </div>
         <div className="content intro-extra">
             <p className="intro-text">
-            Check out my showreel here, and scroll to check out my projects
+            See my showreel here, or check out some of my other projects!
             </p>
         </div>
     </div>
